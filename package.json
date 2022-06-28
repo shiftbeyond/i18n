@@ -1,0 +1,35 @@
+{
+  "name": "@shiftbeyond/i18n",
+  "author": "Jörg Goy, Mr. Simply GmbH",
+  "version": "0.2.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiftbeyond/i18n.git"
+  },
+  "scripts": {
+    "build": "babel --copy-files --extensions '.ts' -d ./lib ./src && tsc --declaration --emitDeclarationOnly",
+    "changelog": "standard-version --skip.bump --skip.commit --skip.tag",
+    "bump:major": "standard-version --skip.changelog --skip.commit --skip.tag --release-as major",
+    "bump:minor": "standard-version --skip.changelog --skip.commit --skip.tag --release-as minor",
+    "bump:patch": "standard-version --skip.changelog --skip.commit --skip.tag --release-as patch",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release": "standard-version",
+    "postinstall-husky": "husky install"
+  },
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-typescript": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@types/node": "latest",
+    "husky": "latest",
+    "standard-version": "latest",
+    "typescript": "latest"
+  }
+}
