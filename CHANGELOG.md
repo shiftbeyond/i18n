@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.3.2 (2022-07-06)
+
+
+### Bug Fixes
+
+* build ([e1f3d0e](https://github.com/shiftbeyond/i18n/commit/e1f3d0e35b13671a230d49e2c3c3041f8a83467a))
+
+
 ### 0.3.1 (2022-07-06)
 
 

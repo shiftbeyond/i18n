@@ -11,5 +11,7 @@ interface CreateTranslatorProps {
 export declare const createTranslator: <Term extends string>({ language, translations, replaceString, linebreakString, }: CreateTranslatorProps) => {
     t: (term: Term | Term[], replace?: boolean) => string;
     pluralize: (term: string) => Term;
+    replaceString: string;
+    linebreakString: string;
 };
 export {};
