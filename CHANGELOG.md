@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.4.2 (2022-07-06)
+
+
+### Bug Fixes
+
+ff45be16d7b76476ae34e068d6dc1f74d74664b8))
+* provide options as object ([795ea57](https://github.com/shiftbeyond/i18n/commit/795ea57bde8a93c597e5a0d702c474038f813eb1))
+
+
 ### 0.4.1 (2022-07-06)
 
 

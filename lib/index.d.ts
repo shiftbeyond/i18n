@@ -10,7 +10,9 @@ interface CreateTranslatorProps {
     noWrapString?: string;
 }
 export declare const createTranslator: <Term extends string>({ language, translations, replaceString, linebreakString, noWrapString, }: CreateTranslatorProps) => {
-    t: (term: Term | Term[], replace?: boolean) => string;
+    t: (term: Term | Term[], options?: {
+        replace?: boolean;
+    }) => string;
     pluralize: (term: string) => Term;
     replaceString: string;
     linebreakString: string;
