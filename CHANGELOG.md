@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.4.1 (2022-07-06)
+
+
+### Bug Fixes
+
+* escape and global replace strings ([14a8f94](https://github.com/shiftbeyond/i18n/commit/14a8f94716f89d04ad7b26f35b615a12a39a08bc))
+
+
 ## 0.4.0 (2022-07-06)
 
 

@@ -6,6 +6,9 @@ interface CreateTranslatorProps {
   noWrapString?: string;
 }
 
+const escapeString = (string: string) =>
+  string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 export const createTranslator = <Term extends string>({
   language,
   translations,
@@ -32,14 +35,14 @@ export const createTranslator = <Term extends string>({
       const mainTranslation = translate(mainTerm);
       return mainTranslation
         .replace(replaceString, subTerms.map(translate).join(' '))
-        .replace(linebreakString, '\n')
-        .replace(noWrapString, '\u00A0');
+        .replace(new RegExp(escapeString(linebreakString), 'g'), '\n')
+        .replace(new RegExp(escapeString(noWrapString), 'g'), '\u00A0');
     } else {
       return terms
         .map((term) => translate(term))
         .join(' ')
-        .replace(linebreakString, '\n')
-        .replace(noWrapString, '\u00A0');
+        .replace(new RegExp(escapeString(linebreakString), 'g'), '\n')
+        .replace(new RegExp(escapeString(noWrapString), 'g'), '\u00A0');
     }
   };
 
