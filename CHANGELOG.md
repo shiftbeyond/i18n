@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.4.0 (2022-07-06)
+
+
+### Features
+
+* add noWrapString ([1401f88](https://github.com/shiftbeyond/i18n/commit/1401f8864e0a778920b6b555c3ee1f7fe4e4362f))
+
+
 ### 0.3.2 (2022-07-06)
 
 
