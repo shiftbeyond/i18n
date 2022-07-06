@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.3.1 (2022-07-06)
+
+
+### Bug Fixes
+
+* return replaceString, linebreakString ([e7dc4e7](https://github.com/shiftbeyond/i18n/commit/e7dc4e759a9d731e292290262ae243038da6c6a5))
+
 ## 0.3.0 (2022-07-06)
 
 

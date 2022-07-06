@@ -41,5 +41,5 @@ export const createTranslator = <Term extends string>({
 
   const pluralize = (term: string) => `${term}s` as unknown as Term;
 
-  return { t, pluralize };
+  return { t, pluralize, replaceString, linebreakString };
 };
