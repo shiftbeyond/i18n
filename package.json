@@ -1,7 +1,7 @@
 {
   "name": "@shiftbeyond/i18n",
   "author": "Jörg Goy, Mr. Simply GmbH",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "license": "MIT",
   "main": "lib/index.js",
   "repository": {

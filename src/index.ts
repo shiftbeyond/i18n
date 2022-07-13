@@ -16,30 +16,41 @@ export const createTranslator = <Term extends string>({
   linebreakString = '///',
   noWrapString = '+++',
 }: CreateTranslatorProps) => {
-  const translate = (term: Term): string => {
+  const translate = (term: Term, capitalize?: boolean): string => {
+    let translation: string;
     try {
       const alias = translations[term].alias;
       if (alias) {
-        return (translations[alias] as any)[language];
+        translation = (translations[alias] as any)[language];
       }
-      return translations[term][language];
+      translation = translations[term][language];
     } catch (error) {
-      return term;
+      translation = term;
     }
+
+    return capitalize
+      ? translation.charAt(0).toUpperCase() + translation.slice(1)
+      : translation;
   };
 
-  const t = (term: Term | Term[], options?: { replace?: boolean }): string => {
+  const t = (
+    term: Term | Term[],
+    options?: { replace?: boolean; capitalize?: boolean },
+  ): string => {
     const terms = Array.isArray(term) ? term : [term];
     if (options?.replace) {
       const [mainTerm, ...subTerms] = terms;
       const mainTranslation = translate(mainTerm);
       return mainTranslation
-        .replace(replaceString, subTerms.map(translate).join(' '))
+        .replace(
+          replaceString,
+          subTerms.map((term) => translate(term, options.capitalize)).join(' '),
+        )
         .replace(new RegExp(escapeString(linebreakString), 'g'), '\n')
         .replace(new RegExp(escapeString(noWrapString), 'g'), '\u00A0');
     } else {
       return terms
-        .map((term) => translate(term))
+        .map((term) => translate(term, options?.capitalize))
         .join(' ')
         .replace(new RegExp(escapeString(linebreakString), 'g'), '\n')
         .replace(new RegExp(escapeString(noWrapString), 'g'), '\u00A0');

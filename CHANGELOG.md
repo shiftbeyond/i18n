@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.5.0 (2022-07-13)
+
+
+### Features
+
+* add capitalize option ([3ca46af](https://github.com/shiftbeyond/i18n/commit/3ca46afad3ed2914c4dfd1f5f58dccc74ce4ac81))
+
+
 ### 0.4.2 (2022-07-06)
 
 
